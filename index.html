@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        <h1>🌦️ Weather App</h1>
+        <p class="subtitle">Check the weather anywhere</p>
+
+        <form id="weatherForm">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+                aria-label="City name"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <button id="locationBtn" class="location-btn">
+            📍 Use My Location
+        </button>
+
+        <p id="message" role="status"></p>
+
+        <div id="weatherInfo" class="weather-info" hidden>
+            <h2 id="cityName"></h2>
+            <div id="weatherIcon" class="weather-icon">☀️</div>
+            <h3 id="temperature"></h3>
+            <p id="description"></p>
+
+            <div class="details">
+                <div class="detail-box">
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>💨</span>
+                    <p>Wind Speed</p>
+                    <strong id="wind"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>🌡️</span>
+                    <p>Feels Like</p>
+                    <strong id="feelsLike"></strong>
+                </div>
+            </div>
+        </div>
+
+        <footer>Powered by Open-Meteo</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
